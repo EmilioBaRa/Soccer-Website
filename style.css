@@ -1,0 +1,492 @@
+/****GENERAL RULES*****/
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0 0 0 0;
+	background-color: #8b8c8f; /********Blue background********/
+}
+/*******NAVIGATION BAR*********/
+.nav {
+	background-color: white;   
+	opacity: 80%;
+	border-bottom: 5px solid black;    
+	text-align: right;    
+	height: 70px;
+	width: 100%;
+	line-height: 70px;
+	display: inline;
+	position: fixed; /********always can be watched********/
+	top: -5px;
+	z-index: 100000;
+	font-family: 'Quicksand', sans-serif;
+}
+.nav_responsive_ul {
+	display: none; /********if needed for responsive media********/
+}
+/****fifa logo****/
+#imagelogo {
+	position: fixed; /********outside the nav to not make interference with the menu********/
+	float: left;
+	display: inline;
+	margin-top: 15px;
+	margin-left: 30px;
+	z-index: 5000000;
+	top: -1.5%;
+}
+/******hyperlinks nav*****/
+.menu {    
+	margin: 10px 40px 0 0;
+}
+.menu a {  /*********general styles*******/
+	clear: right;    
+	text-decoration: none;    
+	color: gray;    
+	margin: 0 30px;  
+	padding-bottom: 10px;	
+	line-height: 50px;
+	font-size: 20px;
+	color: black;
+}
+
+span {    
+color: #2e74a3; /********signup button font color********/
+}
+
+label {   
+	margin: 0 40px 0 0;   
+	font-size: 26px;   
+	line-height: 70px;   
+	display: none;    
+	width: 26px;    
+	float: right;
+ }
+
+#toggle {    
+	display: none;
+}
+/********resizing to iphone********/
+@media only screen and (max-width: 500px) {    
+	label {        
+		display: block;        
+		cursor: pointer;    
+	}   
+	 .menu {        
+	 text-align: center;        
+	 width: 40%;        
+	 display: none;   	 
+	 background:rgb(100, 100, 100, 80%); 
+}    
+	 .menu a {        
+	 display: block;
+     border-bottom: 1px solid #EAEAEB;        
+	 margin: 0; 
+	 border: 1px solid black;
+	 color: white;
+	 opacity: 100%;
+}    
+	#hamburger_signup {
+	background:rgb(250, 250, 250, 60%);
+	color: #2e74a3;
+	}
+	#toggle:checked + .menu { /*********displays the menu*******/
+		position: fixed;
+		display: block;  
+		float: right;
+		top: 8%;
+		left: 60%;
+}
+}
+/*******for ipad********/
+@media screen and (min-width: 501px) and (max-width: 800px) {
+	label {        
+		display: block;        
+		cursor: pointer;    
+	}   
+	 .menu {        
+	 text-align: center;        
+	 width: 40%;        
+	 display: none;    
+}    
+	 .menu a {        
+	 display: block;
+     border-bottom: 1px solid #EAEAEB;        
+	 margin: 0; 
+	 background:rgb(100, 100, 100, 80%);	
+	 border: 1px solid black;
+	 color: white;
+}    
+	#hamburger_signup {
+	background:rgb(250, 250, 250, 60%);
+	color: #2e74a3;
+	}
+	#toggle:checked + .menu { /********displays the ,menu********/
+		position: fixed;
+		display: block;  
+		float: right;
+		top: 6%;
+		left: 60%;
+}
+}
+
+
+
+/***************HOME************/
+#home {
+	width: 100vw;
+	height: 100vh;
+}
+
+#home video{ /*********video in the background*******/
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+
+/**********Fifa world cup fans club text***********/
+#home p {
+	position: absolute;		/*******centering and giving style to the text*********/
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 3.5vw;
+	color: white;
+	z-index: 80000;
+}
+/***********text for iphone*******//*****no need to resize for ipad***/
+@media only screen and (max-width: 500px) {
+	#home p {
+		font-size: 15px;
+	}
+}
+
+
+
+/**********IMPORTANT POINTS**************/
+/*************background***************/
+#infopoints {
+	background-color: #041547;
+	height: 100vh;
+	width: 100vw;
+	display: block;
+}
+/************3 boxes**************/
+.box_infopoints{
+	background-color: #0c2554; /********general styles for the 3 boxes**************/
+	display: block;
+	width: 30%;
+	font-size: 1vw;
+	clear: right;
+	float: left;
+	padding: 1vw;
+	text-align: center;
+	position: relative;
+	top: 5%;
+	left: 3%;
+	z-index: 50000;
+	margin: 0 0 0 12px;
+	box-sizing: border-box;
+}
+
+/********paragraph, header and image inside the boxes********/
+.box_infopoints img {	
+	width: 50%;
+}
+.box_infopoints h2 {
+	color: white;
+	font-family: 'Luckiest Guy', cursive;
+}
+.box_infopoints p {
+	font-family: 'Quicksand', sans-serif;
+	color: #a8a8a8;
+	line-height: 25px;
+}
+
+/********responsive for iphone******/
+@media only screen and (max-width: 500px) {
+	.box_infopoints { /********making the boxes be stacked vertically********/
+		width: 90%;
+		margin: 2% 0 5% 5%;
+		left: -1%;
+	}
+	/********general styling********/
+	.box_infopoints img{
+		width: 25%;
+		display: inline;
+		float: left;
+		margin: 0 5px 5px 0;
+		
+	}
+	.box_infopoints h2 {
+		font-size: 15px;
+}
+	.box_infopoints p {
+		margin-right: 5px;
+		display: inline;
+		font-size: 10px;
+		text-align: justify;
+}
+
+}
+/**********responsive for ipad*******/
+@media screen and (min-width: 501px) and (max-width: 800px) {
+	.box_infopoints { /*******making the boxes stacked vertically*********/
+		width: 90%; 
+		margin: 2% 0 5% 5%;
+		left: -1%;
+	}
+	/*********general styling for inside the box*******/
+	.box_infopoints img{
+		width: 25%;
+		display: inline;
+		float: left;
+		margin: 0 5px 10px 10px;
+		
+	}
+	.box_infopoints h2 {
+		font-size: 20px;
+}
+	.box_infopoints p {
+		margin-right: 5px;
+		display: inline;
+		font-size: 17px;
+		line-height: 30px;
+}
+}
+
+
+
+
+/****************INFORMATION******************/
+#information {
+	background-image: url("media/backgroundstadium.jpg"); /********an image for background********/
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: #35373d;
+	height: 90vh; 
+	width: 100vw;
+}
+
+#informationbox {
+	background-color: black; /*********making the box be a little transparent*******/
+	background:rgb(0, 0, 0, 40%);
+	padding: 15px;
+	position: relative; /********positioning in the center of the section********/
+	top: 20%;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+/********general styles for text********/
+#informationbox h2{
+	color: white;
+	font-size: 30px;
+	line-height: 25px;
+	text-align: center;
+	opacity: 100%;
+	font-family: 'Luckiest Guy', sans-serif;
+}
+
+#informationbox p{
+	color: white;
+	font-size: 20px;
+	line-height: 25px;
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+}
+
+/***************for iphone******/
+@media only screen and (max-width: 500px) {
+	#informationbox { /*********allign to the center of the section fo iphone********/
+	top: 5%;
+	width: 75%;
+}
+/********giving an appropiate font style"size and height"********/
+	#informationbox p{
+	font-size: 15px;
+	line-height: 25px;
+}
+}
+
+
+
+
+/******************SIGN UP*******************/
+/**********video background******/
+#signup {
+	background-color: #4e6094;
+	height: 100vh; 
+	width: 100vw;
+	background-image: url("media/goals_world_cup.mp4"); /********video in background********/
+}
+
+#signup video{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+/************signform*******/
+#signform { /********centeriing the signform box and giving a general style********/
+	position: absolute;
+	margin: 0;
+	top: 320%;
+	left: 35%;
+	color: black;
+	background-color: white;
+	width: 30vw;
+	height: 300px;
+	display: inline;
+	z-index: 75000;
+	background:rgb(151, 196, 166, 40%);
+	border-radius: 20px;
+	box-shadow: 0 10px 30px #000;
+	-webkit-backdrop-filter:blur(10px); /*mozilla*/
+	backdrop-filter:blur(10px); /*chrome*/
+}
+/********text style********/
+#signform h3 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+	padding-top: 5px;
+	margin; 10px 0 0 0;
+}
+
+#signform p {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 25px;
+	text-align: center;
+	color: #2e74a3;
+	margin: 0 0 0 10px;
+	padding-bottom: 5px;
+}
+/************signform for iphone********/
+@media only screen and (max-width: 500px) {
+	#signform { /********making the signform fit in iphone********/
+		width: 65vw;
+		top: 315%;
+		left: 18%;
+		height: 285px;
+	}
+	/*******text style for iphone*********/
+	#signform h3 {
+		font-size: 25px;
+	}
+	#signform p {
+		font-size: 18px;
+	}
+}
+/************signform for ipad*******/
+@media screen and (min-width: 501px) and (max-width: 800px) {
+		#signform { /*********making signform fit in ipad*******/
+		width: 55vw;
+		top: 325%;
+		left: 23%;
+		height: 320px;
+	}
+	/********text style for ipad********/
+	#signform h3 {
+		font-size: 30px;
+	}
+	#signform p {
+		font-size: 28px;
+	}
+}
+
+/*********name and email*************/
+.inputs { /********input format********/
+	display: inline;
+	height: 30px;
+	margin: 5px 60px 15px 60px;
+
+}
+
+.inputs input {
+	width: 50%; /********general styles for input********/
+	height: 10%;
+	background:rgb(0, 0, 0, 20%);
+	border: none;
+	-webkit-backdrop-filter:blur(5px); /*mozilla*/ /********blurrying the inputs for mozilla and chrome********/
+	backdrop-filter:blur(5px); /*chrome*/
+	color: back;
+	font-family: 'Quicksand', sans-serif;
+	margin: 10px 20px 0 0;
+	transition: width 3s; /********effects time********/
+}
+/********effects for inputs********/
+input::placeholder{ 
+	color: black;
+	font-size: 17px;
+}
+
+input:hover{
+	width: 70%;
+}
+/****input for iphone*****/
+@media only screen and (max-width: 500px) {
+	.inputs input { /********effects instructions for iphone*********/
+		transition: 2s;
+	}
+	input:hover{
+		width: 60%;
+	}
+}
+/******input for ipad***/
+@media screen and (min-width: 501px) and (max-width: 800px) {
+	.inputs input { /*******effects instructions for ipad*********/
+		transition: 2s;
+		font-size: 20px;
+	}
+	input:hover{
+		width: 70%;
+	}
+	input::placeholder{
+	color: black;
+	font-size: 20px;
+}
+}
+
+ 
+ /********button sign up*********/
+#signupbutton a{
+	background-color:  #2e74a3; /********general styles for butotn********/
+	padding: 10px 20px 10px 20px;
+	margin:0 0.3px 0.3px 0;
+	box-sizing: border-box;
+	font-family:'Quicksand',sans-serif;
+	font-weight:400;
+	text-align:center;
+	position: absolute;
+	top: 80%;
+	left: 15%;
+	text-decoration: none;
+	border-radius: 10px;
+	box-shadow: 0 1.5px 5px #000;
+	color: white;
+	text-align: center;
+	transition: background-color 2s, color 2s, width 3s; /********effects time********/
+}
+
+#signupbutton a:hover{ /*******some effects when touching the button*********/
+	background-color: white;
+	color: #2e74a3;
+	width:70%;
+}
+/***signup button for iphone**/
+@media only screen and (max-width: 500px) {
+	#signupbutton a { /********style to button for iphone********/
+		width: 70%;
+	} 
+}
+/*****signup button for ipad****/
+@media screen and (min-width: 501px) and (max-width: 800px) {
+		#signupbutton a { /********style to button for ipad********/
+		width: 70%;
+		font-size: 25px;
+	} 
+}
